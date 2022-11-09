@@ -1,0 +1,292 @@
+:root {--yellow: #EAC926;  /*El :root sirve para usarlos mas adelante mas adelante con var(). No es necesario ahcerlo así*/
+    --light-blue: #1259c3;
+    --gray: #666666;
+    --light-gray: #ebebeb;
+    --green: #39b54a;
+    --base-font-family: 'Roboto', sans-serif;
+}
+
+*{  margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* generales */
+
+
+
+/* BODY */
+
+body {
+    background-color: var(--light-gray);  /*Para esto me sirve el root:*/
+    font-family: 'Roboto', sans-serif;
+    }
+
+/* HEADER */
+
+header{
+    background-color: #EAC926;
+    padding: 20px;
+    }
+
+header .logo-header{ 
+    width: 30%;
+    }
+
+header nav .burger-menu{
+    background-color: var(--light-blue);
+    color: white;
+    display: block;  /*Si no uso display:block o inlineblock, no salen bien las propiedades del boton hamburguesa*/
+    font-size: 20px;
+    text-align: center;
+    width: 60px;
+    padding: 20px;
+    border-radius: 4px;
+    margin: auto;
+    }
+
+
+header nav.tablet-pc{
+    display: none;
+    }
+
+header nav.tablet-pc ul{
+    list-style: none;   /* le quito los items bulletin de listado*/
+    margin: 0;          /*lo pongo a la izquierda*/
+    padding: 0;
+    }
+
+header nav.tablet-pc ul a{
+    text-decoration: none;   /* le quito los items bulletin de listado*/
+    color: black;
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px;
+    }        
+
+/* BANNER*/ 
+.banner img{
+    width: 100%;
+    }
+
+/* MAIN */
+main{
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.articulo{
+    margin: 10px 0;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    height: 120vw
+    }
+
+.articulo .imagen-articulo{
+    width: 100%;
+    height: 65%;
+    border-bottom: solid 1px #ebebeb;
+    }
+
+.descripcion-articulo i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: relative;
+    right: 20px;
+    top: -15px;
+    }
+
+article .descripcion-articulo{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        /*border: solid 1px red;*/
+        border-top: 1px solid #ebebeb;
+        padding: 15px;   
+    }
+    
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    background-color: white;
+    }
+
+footer i{
+    font-size: 2em;
+    padding: 30px 0 0;
+    color: var(--light-blue)
+}
+
+footer h4{
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+
+/* TEXTO */
+h1{
+    font-size: 5vw;
+}
+h2{
+    font-size: 3vw;
+}
+
+
+p.titulo-seccion {
+    font-size: 5vw;
+
+}
+
+.titulo-seccion {
+    font-size: 24px;
+    
+}
+
+.precio {
+    font-size: 8vw;
+    margin: 10px 0;
+}
+
+.dscto {
+    font-size: 6vw;
+    margin: 10px 0;
+    color: #39b54a;
+}
+
+.descripcion {
+    font-size: 8vw;
+    margin: 10px 0;
+    display: none;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+
+
+/* MEDIA QUERY CELULAR GRANDE */
+
+@media (min-width: 361px){
+    
+    header nav.tablet-pc{
+    display: block;
+    }
+
+    header nav.celular{
+        display: none;
+    }
+
+    .descripcion {
+        display: block;
+    }
+
+/* MEDIA QUERY TABLET*/
+
+@media(min-width: 470px){
+    .box-productos{ 
+        /*border: dotted 1px red;*/ 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        text-align: left;
+        margin: auto;
+        }
+    
+        .articulo{
+            width: 45%;
+            margin: 5px 2px 10px;
+            height: 60vw;
+        }
+    
+    
+        .precio{
+            width: 40%;
+            margin: 5px 2px 10px;
+            font-size: 10px;
+        }
+        .dscto{
+            width: 40%;
+            margin: 5px 2px 10px;
+            font-size: 10px;
+        }
+    
+        .descripcion{
+            font-size: 10px;
+            width: 100%;
+            justify-content: left;
+        }  
+       
+
+
+}
+   
+/* MEDIA QUERY PC*/
+
+@media (min-width: 769px){
+    header .top-header{
+        /*border: dotted 1px red;*/
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+    }
+
+    .articulo{
+        height: 100%;
+        width: 24%;
+    }
+
+    header h1{
+        font-size: 15px;
+        max-width: 300px;
+        }
+    header h2{
+        font-size: 10px;
+        max-width: 100px;
+    }
+
+    header nav.tablet-pc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav.tablet-pc ul{
+        display: flex;
+    }
+
+    header nav.tablet-pc ul li{
+        margin: 10px
+    }
+
+   
+
+
+    
+}
+
+/* MEDIA QUERY PC MÁXIMO TAMAÑO*/
+
+@media (min-width: 1200px){
+    header .top-header, header .tablet-pc {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+}
