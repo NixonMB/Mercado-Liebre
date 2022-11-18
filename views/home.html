@@ -21,14 +21,20 @@
 <body>
     <header>
         <div class="top-header">
-            <img src="images/logo-mercado-liebre.svg" class="logo-header">      <!-- utilizo esta linea para agregar el loguito al Cuerpo -->
+            <div class="bloque B1">
+                <img src="images/logo-mercado-liebre.svg" class="logo-header">      <!-- utilizo esta linea para agregar el loguito al Cuerpo -->
         
-        <h1>Bienvenidos a MercadoLibre</h1>
-        <br>
-        <h2>Lugar para poner barra de búsqueda</h2>
-        <br>
-        <h2>Comprá en cuotas y sin tarjeta de crédito</h2>
-        <br>
+                <h1>Bienvenidos a MercadoLibre</h1>
+            </div>
+            <div class="bloque B2">
+                <div class="buscador">
+                    <form action="/busqueda" method="POST">
+                        <label for="busqueda"><i class="fas fa-search"></i></label>
+                        <input type="text" placeholder="  Ingresá lo que estás buscando" name="busqueda" id="busqueda" class="caja">
+                    </form>
+                </div>
+            </div>
+             <h2 class="bloque B3">Comprá en cuotas y sin tarjeta de crédito</h2>
         </div> 
 
         <nav class="celular">
@@ -152,7 +158,6 @@
     </section>
 
 </main>
-
 <footer>
     <i class="far fa-credit-card"></i><i class="far fa-money-bill-alt"></i>      <!--agrego los logos de FontAwesome-->
     <h4 id="bold">Pagá con tarjeta o en efectivo</i></h4>   
