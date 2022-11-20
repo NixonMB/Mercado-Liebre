@@ -332,3 +332,23 @@ p.titulo-seccion {
     }
 }
 }
+
+
+
+/* MAIN REGISTER + MAIN LOGIN*/
+
+.main-register, .main-login{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 80%;
+text-align: left;
+border: solid 1px gray;
+padding: 15px;    
+}
+
+.main-register div, .main-login div{
+    margin: 10px 0;
+    width: 90%
+}
+
+

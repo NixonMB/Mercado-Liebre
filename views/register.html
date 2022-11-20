@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a mercado libre</title>
+    <link rel="icon" href="images/logo-mercado-liebre.svg">   <!-- utilizo esta linea para agregar el loguito a la pestaña del navegador -->
+    
+    <link href="css/style.css" rel="stylesheet">    <!-- Vinculo HTML con CSS -->
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">  <!-- Requiero la página de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>   <!-- Requiero la página de Google Fonts-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"  rel="stylesheet" />  <!-- Requiero la página de FontsAwesome-->
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">   <!-- Roboto (Google Fonts)-->
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="top-header">
+            <div class="bloque B1">
+                <img src="images/logo-mercado-liebre.svg" class="logo-header">      <!-- utilizo esta linea para agregar el loguito al Cuerpo -->
+        
+                <h1>Bienvenidos a MercadoLibre</h1>
+            </div>
+            <div class="bloque B2">
+                <div class="buscador">
+                    <form action="/busqueda" method="POST">
+                        <label for="busqueda"><i class="fas fa-search"></i></label>
+                        <input type="text" placeholder="  Ingresá lo que estás buscando" name="busqueda" id="busqueda" class="caja">
+                    </form>
+                </div>
+            </div>
+             <h2 class="bloque B3">Comprá en cuotas y sin tarjeta de crédito</h2>
+        </div> 
+
+        <nav class="celular">
+            <a href="#" class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            
+        </nav>
+
+        <nav class="tablet-pc">
+
+            <ul class="nav-bar-izquierda">
+                <li><a href="#">Ofertas</a></li>  <!-- utilizo # cuando todavía no se la ruta del vinculo -->
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+            </ul>
+            
+                
+            <ul class="nav-bar-izquierda">
+                <li><a href="/register">Creá tu cuenta</a> <i class="fas fa-user-plus"></i></li>
+                <li><a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a> <i class="fas fa-shopping-cart"></i></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="banner">
+        <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+    </section>
+
+    <main class="main-register">
+        <form action="/register.html" method="post">
+            <div class="form-div">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="Ingresar nombre" required>
+            </div>
+            <div class="form-div">
+                <label for="last-name">Apellido</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Ingresar apellido" required>
+            </div>
+            <div class="form-div">
+                <label for="date">Fecha de nacimiento</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div class="form-div">
+                <label for="place">Domicilio:</label>
+                <input type="text" name="place" id="place" required>
+            </div>
+            <div class="form-div">
+                <label for="profile">Qué te gustaría hacer?: </label>
+                <label><input type="checkbox" name="profile" value="comprar">Comprar</label>
+                <label><input type="checkbox" name="profile" value="vender">Vender</label>
+            </div>
+            <div class="form-div">
+                <label for="interests">Seleccionar categorías de interés: </label>
+                <label><input type="checkbox" name="interests" value="electro">Electro</label>
+                <label><input type="checkbox" name="interests" value="moda">Moda</label>
+                <label><input type="checkbox" name="interests" value="hogar">Hogar</label>
+                <label><input type="checkbox" name="interests" value="jugueteria">Juguetería</label>
+                <label><input type="checkbox" name="interests" value="vida-sana">Vida sana</label>
+            </div>
+            <div class="form-div">
+                <label for="profile-picture">Foto de Perfil:</label>
+                <input type="file" name="profile-picture" accept=".jpg" multiple>
+            </div>
+            <div class="form-div">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="*******"  required>
+            </div>
+            <div class="form-div">
+                <label for="password">Reingresá Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="*******"  required>
+            </div>
+            <div class="form-div">
+                <label for="conditions">Acpeto términos y condiciones</label>
+                <label><input type="checkbox" name="conditions" value="1"></label> <!-- puedo ponor si o no, 0 o 1 -->
+            </div>
+            <div class="form-div">
+                <button type="submit">ENVIAR</button>
+            </div>
+            <div class="form-div">
+                <button type="reset">BORRAR</button>
+            </div>
+
+        </form>
+        
+    </main>
+
+
+<footer>
+    <i class="far fa-credit-card"></i><i class="far fa-money-bill-alt"></i>      <!--agrego los logos de FontAwesome-->
+    <h4 id="bold">Pagá con tarjeta o en efectivo</i></h4>   
+    <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+
+    <i class="fas fa-truck"></i>
+    <h4 id="bold">Envío gratis desde $2.500</h4>
+    <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+   
+    <i class="fas fa-lock"></i>
+    <h4 id="bold">Seguridad, de principio a fin</h4>
+    <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@.</p>
+   
+    <h4 id="bold">Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
+    
+</footer>
+</body>
+</html>
