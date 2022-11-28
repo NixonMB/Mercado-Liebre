@@ -96,8 +96,7 @@ main{
     margin: 10px 0;
     padding: 10px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    height: 120vw
+    height: 120vw;
     }
 
 .articulo .imagen-articulo{
@@ -112,11 +111,20 @@ main{
     width: 30px;
     height: 30px;
     border: 1px solid #39b54a;
+    color: #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     right: 20px;
-    top: -35px;
+    top: -20px;
+    }
+
+    .descripcion {
+        visibility: hidden;
+    }
+
+    main section{
+        margin-top: 30px;
     }
 
 article .descripcion-articulo{
@@ -127,7 +135,8 @@ article .descripcion-articulo{
         align-items: baseline;
         text-align: center;
         /*border: solid 1px red;*/
-        padding: 15px;   
+        padding: 15px;
+        position: relative;   
     }
     
 
@@ -142,8 +151,14 @@ footer {
 footer i{
     font-size: 2em;
     padding: 30px 0 0;
-    color: var(--light-blue)
+    color: var(--light-blue);
+    margin: 0 10px
 }
+
+footer i:hover{
+    color: #39b54a;
+}
+
 
 footer h4{
     font-size: 1.5em;
@@ -160,13 +175,9 @@ h2{
 }
 
 
-p.titulo-seccion {
-    font-size: 5vw;
-
-}
 
 .titulo-seccion {
-    font-size: 24px;
+    font-size: 6vw;
     
 }
 
@@ -184,8 +195,8 @@ p.titulo-seccion {
 .descripcion {
     font-size: 8vw;
     margin: 10px 0;
-    display: none;
 }
+
 
 #bold {
     font-weight: bold;
@@ -205,9 +216,6 @@ p.titulo-seccion {
         display: none;
     }
 
-    .descripcion {
-        display: block;
-    }
 
 /* MEDIA QUERY TABLET*/
 
@@ -232,19 +240,23 @@ p.titulo-seccion {
         .precio{
             width: 40%;
             margin: 5px 2px 10px;
-            font-size: 10px;
+            font-size: 18px;
         }
         .dscto{
             width: 40%;
             margin: 5px 2px 10px;
-            font-size: 10px;
+            font-size: 14px;
         }
     
         .descripcion{
-            font-size: 10px;
+            font-size: 15px;
             width: 100%;
             justify-content: left;
         }  
+
+        p.titulo-seccion{
+            font-size: 30px;
+        }
        
 
 
@@ -317,7 +329,38 @@ p.titulo-seccion {
         margin: 10px
     }
 
-   
+    .articulo:hover i{                  /*El primer elemento (hover) indica que la propiedad sucederá al pasar el mouse sobre el hover. EL 2do elemento es en el cual se aplicará la propiedad indicada*/
+        transform: rotate(-90deg);
+    }
+
+    .articulo i{
+    transition-property: transform;
+    transition-duration: 0.5s;
+    }
+
+
+
+    .articulo:hover .descripcion{   /* antes tenía hidden sin media querie*/
+        visibility: visible;
+    }
+
+    .articulo:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);}
+    
+    
+
+
+   footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+   }
+
+   footer div{
+    width: 30%;
+    margin-bottom: 30px;
+   }
 
 
     
@@ -341,9 +384,9 @@ p.titulo-seccion {
     margin-top: 25px;
     margin-bottom: 25px;
     width: 80%;
-text-align: left;
-border: solid 1px gray;
-padding: 15px;    
+    text-align: left;
+    border: solid 1px gray;
+    padding: 15px;    
 }
 
 .main-register div, .main-login div{
