@@ -8,7 +8,8 @@ app.listen(PORT, console.log("listening to port " + PORT));
 
 
 //Middleware
-app.use(express.static("public"))   //La utilizo para indicar que lo que se encuentra en la carpeta "public", es info que le permitimos que se tome desde la info pública del servidor
+app.use(express.static("public"));   //La utilizo para indicar que lo que se encuentra en la carpeta "public", es info que le permitimos que se tome desde la info pública del servidor
+app.set("view engine", "ejs"); //Le indico que voy a usar partials.
 
 
 //Rutas

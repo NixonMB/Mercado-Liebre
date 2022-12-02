@@ -7,15 +7,15 @@ const mainController = {
     
         //res.send("Hola Mundo");    //Lo uso solo si mandase un mensaje
     
-        res.sendFile(path.resolve("./views/home.html"))  //Uso sendFile ya que devuelvo un objeto. Si devolviese un mensaje, solo usaría res.send.
+        res.render(("home.ejs"));  //Uso sendFile ya que devuelvo un objeto. Si devolviese un mensaje, solo usaría res.send.
     },
     register: (req, res) => {
 
-        res.sendFile(path.resolve("./views/register.html"))
+        res.render("register.ejs");
     },
     login: (req, res) => {
 
-        res.sendFile(path.resolve("./views/login.html"))
+        res.render("login.ejs");
     },
 
 }

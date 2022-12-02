@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head> -->
+    <%- include("partials/head") %>
+<!-- </head> -->
+
+
+<body>
+<!-- <header>' -->
+    <%- include("partials/header") %> 
+<!-- </header> -->
+    
+
+    <section class="banner">
+        <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+    </section>
+
+    <main class="main-register">
+        <form action="/register.html" method="post">
+            <div class="form-div">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="Ingresar nombre" required>
+            </div>
+            <div class="form-div">
+                <label for="last-name">Apellido</label>
+                <input type="text" name="last-name" id="last-name" placeholder="Ingresar apellido" required>
+            </div>
+            <div class="form-div">
+                <label for="date">Fecha de nacimiento</label>
+                <input type="date" name="date" id="date" required>
+            </div>
+            <div class="form-div">
+                <label for="place">Domicilio:</label>
+                <input type="text" name="place" id="place" required>
+            </div>
+            <div class="form-div">
+                <label for="profile">Qué te gustaría hacer?: </label>
+                <label><input type="checkbox" name="profile" value="comprar">Comprar</label>
+                <label><input type="checkbox" name="profile" value="vender">Vender</label>
+            </div>
+            <div class="form-div">
+                <label for="interests">Seleccionar categorías de interés: </label>
+                <label><input type="checkbox" name="interests" value="electro">Electro</label>
+                <label><input type="checkbox" name="interests" value="moda">Moda</label>
+                <label><input type="checkbox" name="interests" value="hogar">Hogar</label>
+                <label><input type="checkbox" name="interests" value="jugueteria">Juguetería</label>
+                <label><input type="checkbox" name="interests" value="vida-sana">Vida sana</label>
+            </div>
+            <div class="form-div">
+                <label for="profile-picture">Foto de Perfil:</label>
+                <input type="file" name="profile-picture" accept=".jpg" multiple>
+            </div>
+            <div class="form-div">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="*******"  required>
+            </div>
+            <div class="form-div">
+                <label for="password">Reingresá Contraseña</label>
+                <input type="password" name="password" id="password" placeholder="*******"  required>
+            </div>
+            <div class="form-div">
+                <label for="conditions">Acpeto términos y condiciones</label>
+                <label><input type="checkbox" name="conditions" value="1"></label> <!-- puedo ponor si o no, 0 o 1 -->
+            </div>
+            <div class="form-div">
+                <button type="submit">ENVIAR</button>
+            </div>
+            <div class="form-div">
+                <button type="reset">BORRAR</button>
+            </div>
+
+        </form>
+        
+    </main>
+
+<!-- <footer> -->
+    <%- include("partials/footer") %> 
+<!-- </footer> -->
+
+</body>
+</html>

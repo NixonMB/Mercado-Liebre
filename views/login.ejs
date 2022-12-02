@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- <head> -->
+    <%- include("partials/head") %>
+<!-- </head> -->
+
+
+<body>
+    <!-- <header> -->
+        <%- include("partials/header") %> 
+    <!-- </header> -->
+    
+   
+    <section class="banner">
+        <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
+    </section>
+
+    <main class="main-login">
+        <form action="/login.html" method="post">
+            <div class="form-div">
+                <label for="user-email">Correo electrónico: </label>
+                <input type="text" name="user-email" id="user-email" placeholder="Ingresar correo eléctrónico" required>
+            </div>
+            <div class="form-div">
+                <label for="user-password">Contraseña: </label>
+                <input type="password" name="user-password" id="user-password" placeholder="Ingresar contraseña" required>
+            </div>
+            
+            <div class="form-div">
+                <button type="submit">ENVIAR</button>
+            </div>
+            <div class="form-div">
+                <button type="submit">Olvidé mi contraseña</button>
+            </div>
+
+        </form>
+        
+    </main>
+
+<!-- <footer> -->
+    <%- include("partials/footer.ejs") %> 
+<!-- </footer> -->
+    
+</body>
+</html>
